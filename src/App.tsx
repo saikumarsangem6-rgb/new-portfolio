@@ -24,6 +24,7 @@ import {
   CircuitBoard,
   Activity
 } from 'lucide-react';
+import profileImage from './assets/profile.jpg';
 
 // --- Components ---
 
@@ -289,12 +290,11 @@ export default function App() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="aspect-square rounded-3xl overflow-hidden glass p-2">
+              <div className="w-full h-full rounded-3xl overflow-hidden glass">
                 <img 
-                  src="https://picsum.photos/seed/saikumar/800/800" 
+                  src={profileImage}
                   alt="Sangem Saikumar" 
-                  className="w-full h-full object-cover rounded-2xl transition-all duration-500"
-                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover object-top rounded-3xl transition-all duration-500 hover:scale-105"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 glass p-6 rounded-2xl hidden md:block shadow-lg">
