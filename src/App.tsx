@@ -308,10 +308,7 @@ export default function App() {
             <div className="space-y-6">
               <GlassCard>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  I am Sangem Saikumar, a passionate Electronics and Communication Engineering student at SR University, Warangal, Telangana. 
-                  I thrive at the intersection of hardware and software — from designing embedded systems and simulating circuits in MATLAB 
-                  to building modern web applications and solving complex problems through Data Structures & Algorithms. 
-                  I am driven by curiosity, innovation, and a desire to create impactful technology solutions.
+                  Electronics and Communication Engineering student passionate about Embedded Systems, Digital Electronics, Python Programming, and MERN Stack Development. Actively involved in technical clubs and continuously exploring new technologies through hands-on projects.
                 </p>
               </GlassCard>
 
@@ -332,20 +329,20 @@ export default function App() {
                 ))}
               </div>
 
-              <div className="flex justify-between items-center p-6 glass rounded-2xl shadow-sm">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary-orange">10+</div>
-                  <div className="text-xs text-gray-500 uppercase">Projects</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-deep-orange">500+</div>
-                  <div className="text-xs text-gray-500 uppercase">DSA Solved</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-accent-gold">Open</div>
-                  <div className="text-xs text-gray-500 uppercase">To Work</div>
-                </div>
-              </div>
+              <a href="https://leetcode.com/u/saikumarsangemss/" target="_blank" rel="noopener noreferrer" className="block">
+                <GlassCard className="p-4 flex items-center justify-between hover:border-primary-orange hover:shadow-lg transition-all cursor-pointer border-2 border-transparent">
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 rounded-lg bg-primary-orange/10">
+                      <Code className="text-primary-orange" size={24} />
+                    </div>
+                    <div>
+                      <div className="text-xs text-gray-500 uppercase font-bold">LeetCode Problems</div>
+                      <div className="text-lg font-bold text-gray-800">Solved 250+</div>
+                    </div>
+                  </div>
+                  <ExternalLink className="text-primary-orange" size={20} />
+                </GlassCard>
+              </a>
             </div>
           </div>
         </section>
@@ -414,78 +411,52 @@ export default function App() {
 
         {/* Projects Section */}
         <section id="projects" className="py-24 px-6 max-w-7xl mx-auto">
-          <SectionHeading subtitle="A showcase of my recent work and experiments">My Projects</SectionHeading>
+          <SectionHeading subtitle="Innovative AI-powered solution for hostel food management">Featured Project</SectionHeading>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Personal Portfolio",
-                desc: "A futuristic glassmorphism portfolio website built with React and Tailwind CSS.",
-                tags: ["React", "Tailwind", "Motion"],
-                img: "https://picsum.photos/seed/p1/600/400"
-              },
-              {
-                title: "DSA Problem Tracker",
-                desc: "A Python-based application to track and organize solved DSA problems efficiently.",
-                tags: ["Python", "SQLite", "Automation"],
-                img: "https://picsum.photos/seed/p2/600/400"
-              },
-              {
-                title: "Signal Processing Tool",
-                desc: "MATLAB tool for FFT analysis and filter design for audio signal processing.",
-                tags: ["MATLAB", "Signals", "DSP"],
-                img: "https://picsum.photos/seed/p3/600/400"
-              },
-              {
-                title: "Smart Home IoT",
-                desc: "An IoT-based home automation prototype using Arduino and various sensors.",
-                tags: ["Arduino", "Embedded C", "IoT"],
-                img: "https://picsum.photos/seed/p4/600/400"
-              },
-              {
-                title: "Weather Dashboard",
-                desc: "Real-time weather application fetching data from OpenWeather API.",
-                tags: ["JS", "API", "CSS"],
-                img: "https://picsum.photos/seed/p5/600/400"
-              },
-              {
-                title: "Algorithm Visualizer",
-                desc: "Visual representation of various sorting algorithms for better understanding.",
-                tags: ["JS", "Algorithms", "Canvas"],
-                img: "https://picsum.photos/seed/p6/600/400"
-              }
-            ].map((project, i) => (
-              <GlassCard key={i} className="group overflow-hidden p-0 shadow-sm">
-                <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={project.img} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute inset-0 bg-linear-to-t from-[#FAFAFA] to-transparent opacity-40" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary-orange transition-colors text-gray-800">{project.title}</h3>
-                  <p className="text-sm text-gray-600 mb-4 line-clamp-2">{project.desc}</p>
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tags.map((tag, j) => (
-                      <span key={j} className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-md glass text-primary-orange font-bold">
-                        {tag}
-                      </span>
-                    ))}
+          <div className="flex justify-center">
+            <div className="w-full max-w-2xl">
+              {[
+                {
+                  title: "Food Waste Analysis",
+                  desc: "A sophisticated Hotel Food management system that analyzes food wastage patterns and creates intelligent suggestions with student reviews for better hostel food management. Powered by Gemini AI for accurate food detection.",
+                  tags: ["Python", "Gemini AI", "Backend", "Analysis", "Machine Learning"],
+                  img: "https://dummyimage.com/600x400/FF6B6B/ffffff&text=Food+Waste+Analysis",
+                  repo: "https://github.com/saikumarsangem6-rgb/FOOD-WASTE-ANALYSIS"
+                }
+              ].map((project, i) => (
+                <GlassCard key={i} className="group overflow-hidden p-0 shadow-lg border-2 border-primary-orange/30 hover:border-primary-orange transition-all">
+                  <div className="relative h-64 overflow-hidden">
+                    <img 
+                      src={project.img} 
+                      alt={project.title} 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-[#FAFAFA] to-transparent opacity-40" />
+                    <div className="absolute top-4 right-4 px-4 py-2 glass rounded-full bg-primary-orange/20 text-primary-orange font-bold text-sm">Featured</div>
                   </div>
-                  <div className="flex gap-4">
-                    <button className="flex-1 py-2 rounded-lg glass text-xs font-bold hover:bg-primary-orange hover:text-white transition-all flex items-center justify-center gap-2 text-gray-800">
-                      <ExternalLink size={14} /> Demo
-                    </button>
-                    <button className="flex-1 py-2 rounded-lg glass text-xs font-bold hover:bg-deep-orange hover:text-white transition-all flex items-center justify-center gap-2 text-gray-800">
-                      <Github size={14} /> Code
-                    </button>
+                  <div className="p-8">
+                    <h3 className="text-3xl font-bold mb-4 text-primary-orange">{project.title}</h3>
+                    <p className="text-base text-gray-700 mb-6 leading-relaxed">{project.desc}</p>
+                    <div className="flex flex-wrap gap-3 mb-8">
+                      {project.tags.map((tag, j) => (
+                        <span key={j} className="text-xs uppercase tracking-wider px-3 py-2 rounded-full glass text-primary-orange font-bold bg-primary-orange/10">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex gap-4">
+                      <a href={project.repo} target="_blank" rel="noopener noreferrer" className="flex-1 py-3 px-4 rounded-lg glass text-sm font-bold hover:bg-primary-orange hover:text-white transition-all flex items-center justify-center gap-2 text-gray-800 bg-primary-orange/5 border-2 border-primary-orange/30">
+                        <ExternalLink size={16} /> Live Demo
+                      </a>
+                      <a href={project.repo} target="_blank" rel="noopener noreferrer" className="flex-1 py-3 px-4 rounded-lg text-sm font-bold hover:bg-deep-orange hover:text-white transition-all flex items-center justify-center gap-2 text-white bg-linear-to-r from-primary-orange to-deep-orange">
+                        <Github size={16} /> View Code
+                      </a>
+                    </div>
                   </div>
-                </div>
-              </GlassCard>
-            ))}
+                </GlassCard>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -499,19 +470,19 @@ export default function App() {
                 {
                   title: "B.Tech in Electronics & Communication Engineering",
                   inst: "SR University, Warangal, Telangana",
-                  date: "2022 - 2026 (Expected)",
-                  desc: "Focusing on Signal Processing, Digital Electronics, Embedded Systems, and Programming. Active member of technical clubs."
+                  date: "2023 - 2027",
+                  desc: "Electronics and Communication Engineering student passionate about Embedded Systems, Digital Electronics, Python Programming, and MERN Stack Development. Actively involved in technical clubs and continuously exploring new technologies through hands-on projects."
                 },
                 {
                   title: "Intermediate Education (MPC)",
-                  inst: "Narayana Junior College",
-                  date: "2020 - 2022",
+                  inst: "MJPTBWCREIS",
+                  date: "2021 - 2023",
                   desc: "Completed with excellence in Mathematics, Physics, and Chemistry."
                 },
                 {
                   title: "Secondary School Certificate",
-                  inst: "St. Peter's High School",
-                  date: "2020",
+                  inst: "MJPTBCWREIS",
+                  date: "2020 - 2021",
                   desc: "Foundational education with strong focus on science and mathematics."
                 }
               ].map((edu, i) => (
