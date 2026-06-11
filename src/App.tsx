@@ -7,7 +7,6 @@ import {
   Download, 
   ExternalLink, 
   Code, 
-  Cpu, 
   Database, 
   Layers, 
   Terminal, 
@@ -15,16 +14,12 @@ import {
   Menu, 
   X, 
   GraduationCap, 
-  Award, 
   Send,
   MapPin,
-  Phone,
   Monitor,
-  Smartphone,
   CircuitBoard,
   Activity
 } from 'lucide-react';
-import profileImage from './assets/profile.jpg';
 
 // --- Components ---
 
@@ -283,67 +278,44 @@ export default function App() {
         {/* About Section */}
         <section id="about" className="py-24 px-6 max-w-7xl mx-auto">
           <SectionHeading>About Me</SectionHeading>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="w-full h-full rounded-3xl overflow-hidden glass">
-                <img 
-                  src={profileImage}
-                  alt="Sangem Saikumar" 
-                  className="w-full h-full object-cover object-top rounded-3xl transition-all duration-500 hover:scale-105"
-                />
-              </div>
-              <div className="absolute -bottom-6 -right-6 glass p-6 rounded-2xl hidden md:block shadow-lg">
-                <div className="flex items-center gap-4">
-                  <div className="text-4xl font-bold text-gradient">5+</div>
-                  <div className="text-sm text-gray-600 uppercase tracking-wider">Core<br/>Skills</div>
-                </div>
-              </div>
-            </motion.div>
+          <div className="max-w-4xl mx-auto space-y-6">
+            <GlassCard className="text-center">
+              <p className="text-gray-700 leading-relaxed text-lg">
+ Electronics and Communication Engineering student passionate about Embedded Systems, Digital Electronics, Python Programming, and MERN Stack Development. Actively involved in technical clubs and continuously exploring new technologies through hands-on projects.
+              </p>
+            </GlassCard>
 
-            <div className="space-y-6">
-              <GlassCard>
-                <p className="text-gray-700 leading-relaxed text-lg">
-                  Electronics and Communication Engineering student passionate about Embedded Systems, Digital Electronics, Python Programming, and MERN Stack Development. Actively involved in technical clubs and continuously exploring new technologies through hands-on projects.
-                </p>
-              </GlassCard>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
-                  { icon: <GraduationCap className="text-primary-orange" />, label: "Branch", value: "ECE" },
-                  { icon: <Monitor className="text-deep-orange" />, label: "University", value: "SR University" },
-                  { icon: <MapPin className="text-accent-gold" />, label: "Location", value: "Warangal, TS" },
-                  { icon: <Mail className="text-primary-orange" />, label: "Email", value: "saikumarsangem6@gmail.com" }
-                ].map((info, i) => (
-                  <GlassCard key={i} className="p-4 flex items-center gap-4">
-                    <div className="p-2 rounded-lg bg-black/5">{info.icon}</div>
-                    <div>
-                      <div className="text-xs text-gray-500 uppercase">{info.label}</div>
-                      <div className="text-sm font-medium text-gray-800">{info.value}</div>
-                    </div>
-                  </GlassCard>
-                ))}
-              </div>
-
-              <a href="https://leetcode.com/u/saikumarsangemss/" target="_blank" rel="noopener noreferrer" className="block">
-                <GlassCard className="p-4 flex items-center justify-between hover:border-primary-orange hover:shadow-lg transition-all cursor-pointer border-2 border-transparent">
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 rounded-lg bg-primary-orange/10">
-                      <Code className="text-primary-orange" size={24} />
-                    </div>
-                    <div>
-                      <div className="text-xs text-gray-500 uppercase font-bold">LeetCode Problems</div>
-                      <div className="text-lg font-bold text-gray-800">Solved 250+</div>
-                    </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                { icon: <GraduationCap className="text-primary-orange" />, label: "Branch", value: "ECE" },
+                { icon: <Monitor className="text-deep-orange" />, label: "University", value: "SR University" },
+                { icon: <MapPin className="text-accent-gold" />, label: "Location", value: "Warangal, TS" },
+                { icon: <Mail className="text-primary-orange" />, label: "Email", value: "saikumarsangem6@gmail.com" }
+              ].map((info, i) => (
+                <GlassCard key={i} className="p-4 flex items-center gap-4">
+                  <div className="p-2 rounded-lg bg-black/5">{info.icon}</div>
+                  <div>
+                    <div className="text-xs text-gray-500 uppercase">{info.label}</div>
+                    <div className="text-sm font-medium text-gray-800">{info.value}</div>
                   </div>
-                  <ExternalLink className="text-primary-orange" size={20} />
                 </GlassCard>
-              </a>
+              ))}
             </div>
+
+            <a href="https://leetcode.com/u/saikumarsangemss/" target="_blank" rel="noopener noreferrer" className="block">
+              <GlassCard className="p-4 flex items-center justify-between hover:border-primary-orange hover:shadow-lg transition-all cursor-pointer border-2 border-transparent">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 rounded-lg bg-primary-orange/10">
+                    <Code className="text-primary-orange" size={24} />
+                  </div>
+                  <div>
+                    <div className="text-xs text-gray-500 uppercase font-bold">LeetCode Problems</div>
+                    <div className="text-lg font-bold text-gray-800">Solved 250+</div>
+                  </div>
+                </div>
+                <ExternalLink className="text-primary-orange" size={20} />
+              </GlassCard>
+            </a>
           </div>
         </section>
 
