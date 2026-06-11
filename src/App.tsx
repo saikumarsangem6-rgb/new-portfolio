@@ -253,9 +253,9 @@ export default function App() {
                 <a href="#contact" className="px-8 py-3 rounded-full bg-linear-to-r from-primary-orange to-deep-orange text-white font-bold hover:shadow-[0_0_20px_rgba(255,140,0,0.3)] transition-all">
                   Get In Touch
                 </a>
-                <button className="px-8 py-3 rounded-full border border-black/5 glass hover:bg-white/50 transition-all flex items-center gap-2 text-gray-800">
+                <a href="/resume.pdf" download="Sangem_Saikumar_Resume.pdf" rel="noopener noreferrer" className="px-8 py-3 rounded-full border border-black/5 glass hover:bg-white/50 transition-all flex items-center gap-2 text-gray-800">
                   <Download size={18} /> Download Resume
-                </button>
+                </a>
               </div>
 
               <div className="flex justify-center gap-6">
